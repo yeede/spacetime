@@ -28,7 +28,7 @@ img{border:0;}
 .header canvas {
 	width:100%;height:454px;/*默认全屏显示 可自己设置高度640px*/;
 	display:inline-block;
-    vertical-align:baseline
+    vertical-align:baseline;
 	position:absolute;
 	z-index:-1;
 	}
