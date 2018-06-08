@@ -27,7 +27,7 @@ $(".rule .fl").click(function () {
     window.location.href = "rule.html";
 });
 
-$(".Rule .title .close").click(function () {
+$(".Rule #close").click(function () {
     window.location.href = "activity.html";
 });
 
