@@ -27,6 +27,10 @@ $(".rule .fl").click(function () {
     window.location.href = "rule.html";
 });
 
+$(".Rule .title .close").click(function () {
+    window.location.href = "activity.html";
+});
+
 // 转换时间格式
 function CurentTime()
 {
