@@ -68,8 +68,10 @@ window.onload = function browserRedirect() {
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if ( bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         $('.img img').addClass('img-responsive');
+        $('.Rule .title .close').addClass('img-responsive');
     } else {
         $('.img img').removeClass('img-responsive');
+        $('.Rule .title .close').removeClass('img-responsive');
     }
 };
 
