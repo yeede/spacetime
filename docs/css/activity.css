@@ -48,7 +48,7 @@ body{font-family: "PingFang-Medium";}
 .Rule{color: #666666;}
 .Rule .title{font-size: 5.5rem;margin-left: 5%;margin-top: 26px}
 .Rule .content{font-size: 3.5rem;width: 90%;margin-left: 5%;margin-top: 60px}
-.Rule #close{position: relative;float:right;margin-right: 5%;margin-top: -14%}
+.Rule #close{position: relative;float:right;margin-right: 5%;margin-top: -5%}
 /*.Rule .title .close{position: relative;float:right;margin-right: 5%;}*/
 @media (max-width: 767px) {
     .Rule .title{font-size: 1.5rem;margin-top: 16px}  .Rule .content{font-size: 1rem;margin-top: 20px}
