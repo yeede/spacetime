@@ -8,20 +8,26 @@ body{font-family: "PingFang-Medium";}
 #background img{background-size:100% 100%;position: relative}
 #background .img{margin: 0 auto;color: #ffffff;}
 #background .rule{position: relative;margin-top: 44%}
-#background .rule .fl{margin-left: 17%}
-#background .rule .fr{margin-right: 14%}
-#time{color: #ffffff;position: relative;margin-top: -277%;}
+#background .rule .fl{width: 50%;padding-right: 8px;}
+#background .rule .fr{width: 50%;padding-left: 20px}
+#time{color: #ffffff;position: relative;margin-top: -277%;;width: 100%}
 .time{color: #22abee;}
 @media (max-width: 1024px) {  #background{font-size: 4.5rem}  #background .rule{position: relative;}
-    #background .rule .fl{margin-left: 16%}  #background .rule .fr{margin-right: 11%}  }
+    /*#background .rule .fl{margin-left: 16%}  #background .rule .fr{margin-right: 11%}  */
+}
 @media (max-width: 768px) {  #background{font-size: 3.5rem}  #background .rule{position: relative;}
-    #background .rule .fl{margin-left: 16%}  #background .rule .fr{margin-right: 11%}  }
+    /*#background .rule .fl{margin-left: 16%}  #background .rule .fr{margin-right: 11%}  */
+}
 @media (max-width: 767px) {  #background{font-size: 1.75rem} #time{font-size: 1.5rem} #background .rule{position: relative;}
-    #background .rule .fl{margin-left: 14%}  #background .rule .fr{margin-right: 10%}
+    /*#background .rule .fl{margin-left: 14%}  #background .rule .fr{margin-right: 10%}*/
     #background .rule .winner_list{margin-left: 14%}}
-@media (max-width: 414px) {#time{margin-top: -276%} #background .rule{margin-top: 45%}}
-@media (max-width: 375px) {#time{margin-top: -277%} #background .rule{margin-top: 44%}}
-@media (max-width: 360px) {#background{font-size: 1.5rem}}
+@media (max-width: 414px) {#time{margin-top: -276%} #background .rule{margin-top: 45%}
+    #background .rule .fl,#background .rule .fr{margin-top: -1%}}
+@media (max-width: 375px) {#time{margin-top: -277%} #background .rule{margin-top: 44%}
+    #background .rule .fl,#background .rule .fr{margin-top: 0}}
+@media (max-width: 360px) {#background{font-size: 1.5rem}  #time{font-size: 1.25rem;margin-top: -276%}
+    #background .rule .fl,#background .rule .fr{margin-top: 1%}}
+@media (max-width: 320px) {#background .rule .fl,#background .rule .fr{margin-top: 0}}
 .tishi{position: relative;font-size: 4.5rem;position: fixed;width: 100%;height: 100%;top: 0;left: 0;right: 0;
     background: rgba(0, 0, 0, .5);z-index: 9999;}
 .tishi .box{width: 50%;height: 405px;background-color: #ffffff;border-radius: 24px;position: relative;
@@ -42,6 +48,7 @@ body{font-family: "PingFang-Medium";}
 .Rule{color: #666666;}
 .Rule .title{font-size: 5.5rem;margin-left: 5%;margin-top: 26px}
 .Rule .content{font-size: 3.5rem;width: 90%;margin-left: 5%;margin-top: 60px}
+.Rule .title .close{position: relative;float:right;margin-right: 5%;}
 @media (max-width: 767px) {
     .Rule .title{font-size: 1.5rem;margin-top: 16px}  .Rule .content{font-size: 1rem;margin-top: 20px}
 }
@@ -60,4 +67,3 @@ body{font-family: "PingFang-Medium";}
 #assets_content th,#assets_content td{width: 33%;text-align: center;}
 #assets_content td{font-size: 1.5rem;line-height: 4.5rem;border-bottom: solid 1px #d8d8d8;}
 .kefu{width: 94%;margin-left: 3%;margin-top: 3%;color: #666666;font-size: 1.25rem;margin-bottom: 3%;}
-
