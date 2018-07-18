@@ -31,7 +31,7 @@ $(".Rule #close").click(function () {
     window.location.href = "activity.html";
 });
 
-tab(new Date(),new Date('2018-7-18 14:00:00'));
+tab(new Date(),new Date('2018-7-18 12:00:00'));
 console.log(new Date());
 
 //判断页面打开终端
