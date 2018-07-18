@@ -9,7 +9,8 @@ body{font-family: "PingFang-Medium";}
 #background .img{margin: 0 auto;color: #ffffff;}
 #background .rule{position: relative;margin-top: 44%}
 #background .rule .fl{width: 50%;padding-right: 8px;}
-#background .rule .fr{width: 50%;padding-left: 20px}
+#background .rule .fr{padding-left: 20px}
+/* #background .rule .fr{width: 50%;padding-left: 20px} */
 #time{color: #ffffff;position: relative;margin-top: -277%;;width: 100%}
 .time{color: #22abee;}
 @media (max-width: 1024px) {  #background{font-size: 4.5rem}  #background .rule{position: relative;}
