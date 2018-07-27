@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="新空-基于区块链的价值应用空间 space_time">
+    <meta name="description" content="新空-基于区块链的价值应用空间 space_time spacekong spacekong.com space_time">
+    <meta name="author" content="Zztop">
+    <meta http-equiv ="proma" content = "no-cache"/>
+    <meta http-equiv="cache-control" content="no cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>新空——冲榜领好礼！！！</title>
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <style>
+        /*重置样式*/
+        *{-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color:transparent; font-family: PingFangSC-Regular;}
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}  /* 初始化标签在所有浏览器中的margin、padding值 */
+        fieldset,img {border:0 none}  /* 重置fieldset（表单分组）、图片的边框为0*/
+        dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
+        blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
+        blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
+        input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/
+        button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+        body {background:#fff}   /* 重置body 页面背景为白色 */
+        body,th,td,input,select,textarea,button {line-height:1 ;} /* 重置页面文字属性 */
+        a {color:#666;text-decoration:none}  /* 重置链接a标签 */
+        a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
+        address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}  /* 重置样式标签的样式 */
+        caption {display:none;}    /* 重置表格标题为隐藏 */
+        table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
+        /*定义rem单位*/
+        img{vertical-align:top}  /* 图片在当前行内的垂直位置 */
+        /*定义rem单位*/
+        img{vertical-align:top}  /* 图片在当前行内的垂直位置 */
+        html,body {
+            font-size: 13.333333333vw;
+        }
+        #background1{
+            position: relative;
+            /*width: 100%;*/
+            min-width: 7.5rem;
+            margin-bottom: 1.2rem;
+        }
+        #background1 .img1{
+            height:27.88rem;
+            width: 7.5rem;
+        }
+        #background1 .img1 img{
+            width: 7.5rem;
+            height:27.88rem;
+            min-height: 100vh;
+        }
+        .footer-xz{
+            height: 1.2rem;
+            width: 7.5rem;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer-xz img{
+            font-size: 0;
+            height: 1.2rem;
+            width: 7.5rem;
+            display: block;
+        }
+        .footer-xz a{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0.62rem;
+            margin: auto 0;
+            display: inline-block;
+            width:1.30rem;
+            height:0.6rem;
+            text-align: center;
+            background-color:rgba(53,116,250,1);
+            border-radius:0.06rem;
+            font-size:0.28rem;
+            color:rgba(255,255,255,1);
+            line-height:0.6rem;
+        }
+    </style>
+</head>
+<body>
+<div id="background1">
+    <div class="img1">
+        <img src="/img/wxhdxq.png" class="img-responsive" alt="">
+    </div>
+    <div class="footer-xz">
+        <img src="/img/zu5.png" alt="">
+        <a href="javascript:void(0)">下载</a>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    // 获取终端的相关信息
+    var Terminal = {
+        // 辨别移动终端类型
+        platform : function(){
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+                // android终端或者uc浏览器
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                // 是否为iPhone或者QQHD浏览器
+                iPhone: u.indexOf('iPhone') > -1 ,
+                // 是否iPad
+                iPad: u.indexOf('iPad') > -1
+            };
+        }(),
+        // 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
+        language : (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    // 根据不同的终端，跳转到不同的地址
+    var theUrl = '';
+    if(Terminal.platform.android){//安卓端
+        theUrl = 'http://a.gdown.baidu.com/data/wisegame/f23a60feef837390/xinkong_10102.apk?from=a1101';
+        $(".footer-xz a").attr("href", theUrl)
+        // location.href = theUrl;
+    } else {
+        if(Terminal.platform.iPhone){//iPhone端
+            theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+        }else if(Terminal.platform.iPad){//iPad端
+            theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+        }
+        $(".footer-xz a").attr("href",theUrl)
+    }
+</script>
+</body>
+</html>
