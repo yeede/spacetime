@@ -113,7 +113,29 @@
     }
     // 根据不同的终端，跳转到不同的地址
     var theUrl = '';
-    if(Terminal.platform.android){//安卓端
+    var aioxa ='http://116.62.144.159/api/dictionary/queryDictionaryList?types[]=IosDownload&types[]=AndroidDownload'
+    $.ajax({
+        url:aioxa,
+        type:"get",
+        dataType:"json",
+        success:function(res){
+            // console.log(res)
+            if(Terminal.platform.android){//安卓端
+                theUrl = res.ret.AndroidDownload
+                $(".footer-xz a").attr("href", theUrl)
+            } else {
+                if(Terminal.platform.iPhone){//iPhone端
+                    theUrl = 'itms-services://?action=download-manifest&url=' + res.ret.IosDownload
+                    // theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+                }else if(Terminal.platform.iPad){//iPad端
+                    theUrl = 'itms-services://?action=download-manifest&url=' + res.ret.IosDownload
+                    // theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+                }
+                $(".footer-xz a").attr("href",theUrl)
+            }
+        }
+    });
+  /*  if(Terminal.platform.android){//安卓端
         theUrl = 'http://a.gdown.baidu.com/data/wisegame/f23a60feef837390/xinkong_10102.apk?from=a1101';
         $(".footer-xz a").attr("href", theUrl)
         // location.href = theUrl;
@@ -124,7 +146,7 @@
             theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
         }
         $(".footer-xz a").attr("href",theUrl)
-    }
+    }*/
 </script>
 </body>
 </html>

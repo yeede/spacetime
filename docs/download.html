@@ -7,6 +7,7 @@
     <meta name="author" content="Zztop">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>新空</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         // 获取终端的相关信息
         var Terminal = {
@@ -27,7 +28,30 @@
         }
         // 根据不同的终端，跳转到不同的地址
         var theUrl = 'https://yeede.github.io/spacetime';
-        if(Terminal.platform.android){//安卓端
+        var aioxa =' http://116.62.144.159/api/dictionary/queryDictionaryList?types[]=IosDownload&types[]=AndroidDownload'
+        $.ajax({
+            url:aioxa,
+            type:"get",
+            dataType:"json",
+            success:function(res){
+                console.log(res)
+                if(Terminal.platform.android){//安卓端
+                    theUrl = res.ret.AndroidDownload;
+                    location.href = theUrl;
+                } else {
+                    if(Terminal.platform.iPhone){//iPhone端
+                        theUrl = 'itms-services://?action=download-manifest&url=' + res.ret.IosDownload
+                        // theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+                    }else if(Terminal.platform.iPad){//iPad端
+                        theUrl = 'itms-services://?action=download-manifest&url=' + res.ret.IosDownload
+                        // theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
+                    }
+                    location.href = theUrl;
+                }
+            }
+        });
+
+    /*    if(Terminal.platform.android){//安卓端
             theUrl = 'http://a.gdown.baidu.com/data/wisegame/f23a60feef837390/xinkong_10102.apk?from=a1101';
             location.href = theUrl;
         } else {
@@ -37,7 +61,7 @@
                  theUrl = 'itms-services://?action=download-manifest&url=https://spacetime.oss-cn-hangzhou.aliyuncs.com/app_download/manifest.plist';
                 }
             location.href = theUrl;
-        }
+        }*/
 
     </script>
 </head>
